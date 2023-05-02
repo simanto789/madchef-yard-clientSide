@@ -1,4 +1,5 @@
 import React from 'react';
+import './header.css'
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
@@ -12,9 +13,9 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <Nav.Link href="#features">Home</Nav.Link>
-                            <Nav.Link href="#pricing">Blog</Nav.Link>
-                            <Nav.Link href="#pricing">About</Nav.Link>
+                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#blog">Blog</Nav.Link>
+                            <Nav.Link href="#about">About</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="#deets">Profile</Nav.Link>
