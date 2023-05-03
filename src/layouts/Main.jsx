@@ -4,6 +4,7 @@ import Footer from '../pages/Shared/Footer/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
 import RightNav from '../pages/Shared/RightNav/RightNav';
 import Banner from './Banner';
+import Chefdata from '../pages/Shared/Chefdata/Chefdata';
 
 const Main = () => {
     return (
@@ -13,7 +14,7 @@ const Main = () => {
             <Container>
                 <Row>
                     <Col lg={8} xs={12}>
-                        <h1>main content</h1>
+                        <Chefdata></Chefdata>
                     </Col>
                     <Col lg={4} xs={12} >
                         <RightNav></RightNav>
