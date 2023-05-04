@@ -11,19 +11,18 @@ const ChefCard = ({ c }) => {
                     <Card.Body>
                         <Card.Title>{c.name}</Card.Title>
                         <Card.Text>
-                         Experience: {c.experience}
+                            Experience: {c.experience}
                         </Card.Text>
                         <Card.Text>
-                         No of Recipes: {c.recipes}
+                            No of Recipes: {c.recipes}
                         </Card.Text>
                         <Card.Text>
-                         Likes: {c.likes}
+                            Likes: {c.likes}
                         </Card.Text>
                         <button type="button" className="btn btn-outline-danger">View Recipes</button>
                     </Card.Body>
                 </Card>
             </Col>
-
         </div>
     );
 };
