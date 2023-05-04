@@ -5,7 +5,7 @@ import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-sv
 
 function Footer() {
   return (
-    <footer>
+    <footer className="container">
       <Container fluid className="p-0">
         <Row noGutters>
           <Col lg={4} md={6} sm={12}>

@@ -18,6 +18,7 @@ const Chefdata = () => {
 
     return (
         <div>
+            <h1 className='mb-4'>Our Top Chef</h1>
             {loading ? (
                 <Spinner animation="border" role="status">
                     <span className="sr-only">Loading...</span>
