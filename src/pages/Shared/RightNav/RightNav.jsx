@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import Contact from '../Contact/Contact';
 
 const RightNav = () => {
     return (
@@ -37,6 +38,7 @@ const RightNav = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
+            <Contact></Contact>
         </div>
     );
 };
