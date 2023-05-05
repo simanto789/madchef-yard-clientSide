@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css'
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -10,6 +11,36 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand className='fs-3 fw-bolder text-danger' href="#home">MadChef Yard</Navbar.Brand>
+
+                    {/*  */}
+                    <ul className='items-center hidden space-x-8 lg:flex'>
+                        <li>
+                            <NavLink
+                                to='/statistic'
+                                className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold' : 'default')}
+                            >
+                                Statistic
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to='/apply'
+                                className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold' : 'default')}
+                            >
+                                Apply job
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to='/blog'
+                                className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold' : 'default')}
+                            >
+                                Blog
+                            </NavLink>
+                        </li>
+
+                    </ul>
+                    {/*  */}
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
@@ -20,7 +51,7 @@ const Header = () => {
                         <Nav>
                             <Nav.Link href="#deets">Profile</Nav.Link>
                             <Nav.Link eventKey={2} href="#memes">
-                            <button type="button" className="btn btn-outline-danger">Log in</button>
+                                <button type="button" className="btn btn-outline-danger">Log in</button>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
