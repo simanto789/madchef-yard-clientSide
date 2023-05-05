@@ -16,25 +16,19 @@ const Header = () => {
                     <ul className='items-center hidden space-x-8 lg:flex'>
                         <li>
                             <NavLink
-                                to='/statistic'
-                                className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold' : 'default')}
-                            >
+                                to='/statistic' >
                                 Statistic
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
-                                to='/apply'
-                                className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold' : 'default')}
-                            >
+                                to='/apply' >
                                 Apply job
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
-                                to='/blog'
-                                className={({ isActive }) => (isActive ? 'text-yellow-600 font-bold' : 'default')}
-                            >
+                                to='/blog' >
                                 Blog
                             </NavLink>
                         </li>
