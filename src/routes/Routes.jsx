@@ -6,6 +6,8 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 import Login from "../pages/Home/Login/Login";
 import Blog from "../pages/Blog/Blog";
+import Register from "../pages/Home/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -24,13 +26,18 @@ const router = createBrowserRouter([
             },
             {
                 path: '/chef/:id',
-                element: <ChefDetails></ChefDetails>,
+                element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`https://madchef-yard-server-side-simanto789.vercel.app/chef/${params.id}`)
              
             },
             {
                 path: 'login',
                 element: <Login></Login>
+                
+            },
+            {
+                path: 'register',
+                element: <Register></Register>
                 
             }
             

@@ -1,9 +1,18 @@
 import './header.css';
-import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch( error => console.log(error));
+    }
     return (
         <Container>
             {/* header */}
@@ -17,7 +26,12 @@ const Header = () => {
                             <NavLink className='fw-bolder nav-link' activeClassName='active' to="/blog">Blog</NavLink>
                         </Nav>
                         <Nav>
-                            <NavLink className='fw-bolder nav-link' activeClassName='active' to="/login">login</NavLink>
+                            {user && <NavLink><div className="text-center">
+                                {user.displayName}
+                            </div></NavLink>}
+                            {user ? <Button onClick={handleLogOut}>logOut</Button> :
+                                <NavLink className='fw-bolder nav-link' activeClassName='active' to="/login">login</NavLink>
+                                }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
