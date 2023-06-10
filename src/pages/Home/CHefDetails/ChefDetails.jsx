@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const ChefDetails = () => {
     const [isFavorite, setIsFavorite] = useState(false);
     const c = useLoaderData();
-    const { picture, name, experience } = c;
+    const { picture, name, experience,details,recipes,rating,likes } = c;
 
     const handleFavoriteClick = () => {
         setIsFavorite(true);
@@ -20,9 +20,11 @@ const ChefDetails = () => {
                 <Card.Img style={{ height: '500px' }} variant="top" src={picture} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </Card.Text>
+                    <Card.Text>Details: {details}</Card.Text>
+                    <Card.Text>Total Recipes: {recipes}</Card.Text>
+                    <Card.Text>Experience: {experience} years</Card.Text>
+                    <Card.Text>Likes: {likes}</Card.Text>
+                    <Card.Text>Ratings: {rating}</Card.Text>
                     <Button variant="btn btn-outline-danger" onClick={handleFavoriteClick} disabled={isFavorite}>
                         {isFavorite ? 'Favorited' : 'Favorite'}
                     </Button>

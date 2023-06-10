@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
-
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
         logOut()
             .then()
-            .catch( error => console.log(error));
+            .catch(error => console.log(error));
     }
+
     return (
         <Container>
             {/* header */}
@@ -22,16 +22,36 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <NavLink exact="true" className='fw-bolder nav-link' activeClassName='active' to="/">Home</NavLink>
+                            <NavLink exact className='fw-bolder nav-link' activeClassName='active' to="/">Home</NavLink>
                             <NavLink className='fw-bolder nav-link' activeClassName='active' to="/blog">Blog</NavLink>
                         </Nav>
                         <Nav>
-                            {user && <NavLink><div className="text-center">
-                                {user.displayName}
-                            </div></NavLink>}
-                            {user ? <Button onClick={handleLogOut}>logOut</Button> :
-                                <NavLink className='fw-bolder nav-link' activeClassName='active' to="/login">login</NavLink>
-                                }
+                            {user && (
+                                <NavLink
+                                    className="nav-link"
+                                    title={user.displayName} // Set the displayName as the title attribute
+                                >
+                                    <div className="text-center">
+                                        {user.displayName}
+                                    </div>
+                                </NavLink>
+                            )}
+                            {user ? (
+                                <NavLink
+                                    className='fw-bolder nav-link outline-danger'
+                                    onClick={handleLogOut}
+                                >
+                                    logOut
+                                </NavLink>
+                            ) : (
+                                <NavLink
+                                    className='fw-bolder nav-link outline-danger'
+                                    activeClassName='active'
+                                    to="/login"
+                                >
+                                    login
+                                </NavLink>
+                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
