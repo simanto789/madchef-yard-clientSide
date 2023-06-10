@@ -7,7 +7,7 @@ const Chefdata = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chef')
+        fetch('https://madchef-yard-server-side-simanto789.vercel.app/chef')
             .then(res => res.json())
             .then(data => {
                 setChef(data);
