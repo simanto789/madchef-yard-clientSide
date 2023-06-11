@@ -29,10 +29,11 @@ const Header = () => {
                             {user && (
                                 <NavLink
                                     className="nav-link"
-                                    title={user.displayName} // Set the displayName as the title attribute
+                                    title={user.displayName}
                                 >
                                     <div className="text-center">
                                         {user.displayName}
+                                        <img style={{height: '40px'}} className='rounded' src={user.photoURL} alt="" />
                                     </div>
                                 </NavLink>
                             )}
