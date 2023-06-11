@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="container">
       <Container fluid className="p-0">
-        <Row noGutters>
+        <Row >
           <Col lg={4} md={6} sm={12}>
             <div className="footer-info p-4">
               <h3>About Us</h3>
@@ -15,6 +15,7 @@ function Footer() {
                 We are a team of experienced chefs who are passionate about creating
                 delicious and healthy meals for our customers.
               </p>
+              <p>&copy; 2023 Chef Restaurant. All rights reserved.</p>
             </div>
           </Col>
           <Col lg={4} md={6} sm={12}>
@@ -36,18 +37,7 @@ function Footer() {
               <p className="fs-5">Instagram <FontAwesomeIcon  icon={faInstagram} /></p>
             </div>
           </Col>
-        </Row>
-        <Row noGutters>
-          <Col className="footer-credits p-3 text-center" sm={12}>
-            <p>&copy; 2023 Chef Restaurant. All rights reserved.</p>
-            <p>Created by Your Name</p>
-          </Col>
-        </Row>
-        <Row noGutters>
-          <Col className="text-center py-3" sm={12}>
-            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
-          </Col>
-        </Row>
+        </Row>   
       </Container>
     </footer>
   );

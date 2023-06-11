@@ -22,8 +22,8 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <NavLink exact className='fw-bolder nav-link' activeClassName='active' to="/">Home</NavLink>
-                            <NavLink className='fw-bolder nav-link' activeClassName='active' to="/blog">Blog</NavLink>
+                            <NavLink exact className='fw-bolder nav-link' to="/">Home</NavLink>
+                            <NavLink className='fw-bolder nav-link' to="/blog">Blog</NavLink>
                         </Nav>
                         <Nav>
                             {user && (
@@ -47,7 +47,7 @@ const Header = () => {
                             ) : (
                                 <NavLink
                                     className='fw-bolder nav-link outline-danger'
-                                    activeClassName='active'
+                                   
                                     to="/login"
                                 >
                                     login
